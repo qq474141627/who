@@ -26,25 +26,25 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="31dip"
-                    android:background="@drawable/qm_bg_ganginfo_title"
-                    android:gravity="center"
                     android:text="公告"
+                    android:gravity="center"
                     android:textColor="@color/xlganginfo_title_color"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:background="@drawable/qm_bg_ganginfo_title"
+                    android:textStyle="bold"
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/textGangAnnouncements"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/qm_bg_ganginfo_items"
-                    android:ellipsize="end"
-                    android:gravity="center_vertical"
-                    android:lineSpacingMultiplier="1.6"
-                    android:paddingBottom="13dip"
                     android:paddingLeft="40dip"
                     android:paddingRight="40dip"
                     android:paddingTop="13dip"
+                    android:paddingBottom="13dip"
+                    android:lineSpacingMultiplier="1.6"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
                     android:textColor="@color/xlganginfo_text_color"
                     android:textSize="11sp" />
             </LinearLayout>
@@ -58,21 +58,21 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="31dip"
-                    android:background="@drawable/qm_bg_ganginfo_title"
                     android:gravity="center"
                     android:text="信息"
+                    android:textStyle="bold"
                     android:textColor="@color/xlganginfo_title_color"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:background="@drawable/qm_bg_ganginfo_title"/>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/qm_bg_ganginfo_items"
+                    android:paddingTop="13dip"
                     android:paddingBottom="13dip"
                     android:paddingLeft="40dip"
                     android:paddingRight="30dip"
-                    android:paddingTop="13dip">
+                    android:background="@drawable/qm_bg_ganginfo_items">
 
                     <Button
                         android:id="@+id/btnDonate"
@@ -80,18 +80,18 @@
                         android:layout_height="24dip"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
-                        android:background="@mipmap/qm_btn_ganginfo_donate"
                         android:text="捐献"
+                        android:textSize="13sp"
                         android:textColor="@color/xlganginfo_button_donate_color"
-                        android:textSize="13sp" />
+                        android:background="@mipmap/qm_btn_ganginfo_donate" />
 
                     <TextView
                         android:id="@+id/textGangInfo"
+                        android:layout_toLeftOf="@+id/btnDonate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_toLeftOf="@+id/btnDonate"
-                        android:ellipsize="end"
                         android:lineSpacingMultiplier="1.5"
+                        android:ellipsize="end"
                         android:textColor="@color/xlganginfo_text_color"
                         android:textSize="11sp" />
 
@@ -107,25 +107,25 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="31dip"
-                    android:background="@drawable/qm_bg_ganginfo_title"
-                    android:gravity="center"
                     android:text="宣言"
+                    android:gravity="center"
                     android:textColor="@color/xlganginfo_title_color"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:background="@drawable/qm_bg_ganginfo_title"
+                    android:textStyle="bold"
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/textGangDeclaration"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/qm_bg_ganginfo_items"
-                    android:ellipsize="end"
-                    android:gravity="center_vertical"
-                    android:lineSpacingMultiplier="1.5"
-                    android:paddingBottom="13dip"
                     android:paddingLeft="40dip"
                     android:paddingRight="40dip"
                     android:paddingTop="13dip"
+                    android:paddingBottom="13dip"
+                    android:lineSpacingMultiplier="1.5"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
                     android:textColor="@color/xlganginfo_text_color"
                     android:textSize="11sp" />
             </LinearLayout>
@@ -139,12 +139,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="31dip"
-                    android:background="@drawable/qm_bg_ganginfo_title"
-                    android:gravity="center"
                     android:text="日志"
+                    android:gravity="center"
                     android:textColor="@color/xlganginfo_title_color"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:background="@drawable/qm_bg_ganginfo_title"
+                    android:textStyle="bold"
+                    android:textSize="15sp" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -155,29 +155,29 @@
                         android:id="@+id/ptrFrameLayout"
                         android:layout_width="match_parent"
                         android:layout_height="150dip"
-                        android:background="@drawable/qm_bg_ganginfo_items"
                         app:ptr_duration_to_close="200"
                         app:ptr_duration_to_close_header="1000"
                         app:ptr_keep_header_when_refresh="true"
                         app:ptr_pull_to_fresh="false"
-                        app:ptr_ratio_of_header_height_to_refresh="0.5"
-                        app:ptr_resistance="1.2">
+                        app:ptr_ratio_of_header_height_to_refresh="1.2"
+                        android:background="@drawable/qm_bg_ganginfo_items"
+                        app:ptr_resistance="1.7">
 
                         <android.support.v7.widget.RecyclerView
                             android:id="@+id/recyclerViewGangLog"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginBottom="20dip"
-                            android:fadingEdge="none"
-                            android:overScrollMode="never"
-                            android:paddingBottom="13dip"
                             android:paddingLeft="40dip"
                             android:paddingRight="40dip"
-                            android:paddingTop="13dip">
+                            android:paddingBottom="13dip"
+                            android:paddingTop="13dip"
+                            android:overScrollMode="never"
+                            android:fadingEdge="none">
                         </android.support.v7.widget.RecyclerView>
                     </com.xl.views.ptr.PtrClassicFrameLayout>
                 </RelativeLayout>
-
+               
                 <android.support.v4.widget.Space
                     android:layout_width="match_parent"
                     android:layout_height="20dip" />

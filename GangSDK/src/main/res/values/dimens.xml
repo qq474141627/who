@@ -43,25 +43,24 @@
 
     <dimen name="loudspeakerheight">60dp</dimen>
     <!--字体大小  start-->
-
     <!--title bar-->
     <dimen name="xl_main_title">25sp</dimen>
     <!--tab-->
     <dimen name="xl_tab_item">13sp</dimen>
-    <!--社群排行榜-->
-    <dimen name="xl_ganglist_button_apply">13sp</dimen>
+    社群排行榜
+    <dimen name="xl_ganglist_button_apply">12sp</dimen>
     <!--社群推荐-->
-    <dimen name="xl_recommend_button_apply">13sp</dimen>
+    <dimen name="xl_recommend_button_apply">12sp</dimen>
     <!--社群申请-->
-    <dimen name="xl_apply_button_apply_cancel">11sp</dimen>
+    <dimen name="xl_apply_button_apply_cancel">12sp</dimen>
     <!--社群邀请-->
-    <dimen name="xl_invite_button_agree">15sp</dimen>
-    <dimen name="xl_invite_button_refuse">15sp</dimen>
+    <dimen name="xl_invite_button_agree">12sp</dimen>
+    <dimen name="xl_invite_button_refuse">12sp</dimen>
     <!--社群聊天-->
     <dimen name="xl_gang_chat_tab_item">14sp</dimen>
     <dimen name="xl_gang_chat_tips_hint">12sp</dimen>
     <!--社群排行榜-->
-    <dimen name="xl_gangrank_item_declaration">11sp</dimen>
+    <dimen name="xl_gangrank_item_declaration">13sp</dimen>
     <!--字体颜色  end-->
 
 </resources>
