@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="31dip"
+                    android:background="@drawable/qm_bg_ganginfo_title"
+                    android:gravity="center"
+                    android:text="公告"
+                    android:textColor="@color/xlganginfo_title_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textGangAnnouncements"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/qm_bg_ganginfo_items"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lineSpacingMultiplier="1.6"
+                    android:paddingBottom="13dip"
+                    android:paddingLeft="40dip"
+                    android:paddingRight="40dip"
+                    android:paddingTop="13dip"
+                    android:textColor="@color/xlganginfo_text_color"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="31dip"
+                    android:background="@drawable/qm_bg_ganginfo_title"
+                    android:gravity="center"
+                    android:text="信息"
+                    android:textColor="@color/xlganginfo_title_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/qm_bg_ganginfo_items"
+                    android:paddingBottom="13dip"
+                    android:paddingLeft="40dip"
+                    android:paddingRight="30dip"
+                    android:paddingTop="13dip">
+
+                    <Button
+                        android:id="@+id/btnDonate"
+                        android:layout_width="48dip"
+                        android:layout_height="24dip"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@mipmap/qm_btn_ganginfo_donate"
+                        android:text="捐献"
+                        android:textColor="@color/xlganginfo_button_donate_color"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/textGangInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/btnDonate"
+                        android:ellipsize="end"
+                        android:lineSpacingMultiplier="1.5"
+                        android:textColor="@color/xlganginfo_text_color"
+                        android:textSize="11sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="31dip"
+                    android:background="@drawable/qm_bg_ganginfo_title"
+                    android:gravity="center"
+                    android:text="宣言"
+                    android:textColor="@color/xlganginfo_title_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textGangDeclaration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/qm_bg_ganginfo_items"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lineSpacingMultiplier="1.5"
+                    android:paddingBottom="13dip"
+                    android:paddingLeft="40dip"
+                    android:paddingRight="40dip"
+                    android:paddingTop="13dip"
+                    android:textColor="@color/xlganginfo_text_color"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="31dip"
+                    android:background="@drawable/qm_bg_ganginfo_title"
+                    android:gravity="center"
+                    android:text="日志"
+                    android:textColor="@color/xlganginfo_title_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dip"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <com.xl.views.ptr.PtrClassicFrameLayout
+                        android:id="@+id/ptrFrameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dip"
+                        android:background="@drawable/qm_bg_ganginfo_items"
+                        app:ptr_duration_to_close="200"
+                        app:ptr_duration_to_close_header="1000"
+                        app:ptr_keep_header_when_refresh="true"
+                        app:ptr_pull_to_fresh="false"
+                        app:ptr_ratio_of_header_height_to_refresh="0.5"
+                        app:ptr_resistance="1.2">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerViewGangLog"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="20dip"
+                            android:fadingEdge="none"
+                            android:overScrollMode="never"
+                            android:paddingBottom="13dip"
+                            android:paddingLeft="40dip"
+                            android:paddingRight="40dip"
+                            android:paddingTop="13dip">
+                        </android.support.v7.widget.RecyclerView>
+                    </com.xl.views.ptr.PtrClassicFrameLayout>
+                </RelativeLayout>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

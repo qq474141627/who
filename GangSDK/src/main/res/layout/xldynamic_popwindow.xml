@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="27dip"
+        android:layout_height="30dip"
+        android:background="@drawable/qm_bg_gangdynamic_menu_popwindow">
+
+        <TextView
+            android:id="@+id/textMenuDelete"
+            android:visibility="gone"
+            android:layout_width="41dip"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="删除"
+            android:textSize="11sp"
+            android:textColor="@color/xldynamic_item_popwindow_text_color" />
+
+        <TextView
+            android:id="@+id/textMenuReport"
+            android:visibility="gone"
+            android:layout_width="41dip"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="举报"
+            android:textSize="11sp"
+            android:textColor="@color/xldynamic_item_popwindow_text_color" />
+
+        <View
+            android:id="@+id/viewLine1"
+            android:visibility="gone"
+            android:layout_width="1dip"
+            android:layout_height="15dip"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/qm_bg_gangdynamic_menu_segment_line" />
+
+        <TextView
+            android:id="@+id/textMenuTop"
+            android:visibility="gone"
+            android:layout_width="41dip"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="置顶"
+            android:textSize="11sp"
+            android:textColor="@color/xldynamic_item_popwindow_text_color" />
+
+        <View
+            android:id="@+id/viewLine2"
+            android:visibility="gone"
+            android:layout_width="1dip"
+            android:layout_height="15dip"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/qm_bg_gangdynamic_menu_segment_line"/>
+
+        <TextView
+            android:id="@+id/textMenuHide"
+            android:visibility="gone"
+            android:layout_width="41dip"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="隐藏"
+            android:textSize="11sp"
+            android:textColor="@color/xldynamic_item_popwindow_text_color"/>
+
+    </LinearLayout>
+</LinearLayout>

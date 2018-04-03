@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/dynamicsSpace"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dip"
+            android:paddingBottom="8dip"
+            android:layout_marginBottom="17dip"
+            android:background="@drawable/qm_bg_dynamiccomment_input_frame">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dip"
+                android:layout_marginRight="24dip">
+
+                <Button
+                    android:id="@+id/btnDynamicComment"
+                    android:layout_width="52dip"
+                    android:layout_height="34dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@+id/editCommentContent"
+                    android:background="@mipmap/qm_btn_dynamiccomment_comment"
+                    android:text="评论"
+                    android:textColor="@color/xldynamic_dialog_comment_button_color"
+                    android:textSize="13sp"/>
+
+                <EditText
+                    android:id="@+id/editCommentContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:maxHeight="60dip"
+                    android:maxLines="3"
+                    android:background="@drawable/qm_bg_dynamiccomment_input"
+                    android:layout_toLeftOf="@+id/btnDynamicComment"
+                    android:textSize="13dip"
+                    android:textColor="@color/xldynamic_dialog_comment_input_color"
+                    android:textColorHint="@color/xldynamic_dialog_comment_input_color"
+                    android:paddingLeft="16dip"
+                    android:paddingRight="16dip"
+                    android:paddingTop="7dip"
+                    android:paddingBottom="7dip" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

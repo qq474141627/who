@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="7dip"
+        android:paddingTop="7dip">
+
+        <EditText
+            android:id="@+id/editContent"
+            android:layout_width="match_parent"
+            android:layout_height="93dip"
+            android:background="@mipmap/qm_bg_publishdynamic_input"
+            android:gravity="left|top"
+            android:textSize="13sp"
+            android:textColor="#505050"
+            android:maxLength="150"
+            android:hint="写下你的心路历程"
+            android:textColorHint="@color/xldynamic_publish_input"
+            android:inputType="textMultiLine"
+            android:paddingBottom="13dip"
+            android:paddingLeft="30dip"
+            android:paddingRight="30dip"
+            android:paddingTop="13dip"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/editContent"
+            android:paddingLeft="22dip"
+            android:paddingRight="22dip">
+
+            <LinearLayout
+                android:id="@+id/LlVoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dip"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/areaVoice"
+                    android:layout_width="120dip"
+                    android:layout_height="20dip"
+                    android:background="@drawable/qm_record_bg_voice_play"
+                    android:orientation="horizontal"
+                    android:padding="3dip">
+
+                    <View
+                        android:id="@+id/imageVoice"
+                        android:layout_width="15dip"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/qm_record_volume_left3" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textVoiceTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="11dip"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#2b8adb"
+                    android:textSize="17sp" />
+
+                <ImageButton
+                    android:id="@+id/btnVoiceDelete"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_marginLeft="11dip"
+                    android:background="@mipmap/qm_btn_publishdynamic_delete" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/RlBottom"
+                android:layout_below="@+id/LlVoice"
+                android:layout_marginTop="14dip">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dip"
+                            android:fadingEdge="none"
+                            android:overScrollMode="never"></android.support.v7.widget.RecyclerView>
+
+                        <LinearLayout
+                            android:id="@+id/LlPicture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dip"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:id="@+id/btnTakePhoto"
+                                android:layout_width="55dip"
+                                android:layout_height="55dip"
+                                android:background="@mipmap/qm_btn_publishdynamic_camera" />
+
+                            <ImageButton
+                                android:id="@+id/btnSelectPicture"
+                                android:layout_width="55dip"
+                                android:layout_height="55dip"
+                                android:layout_marginLeft="10dip"
+                                android:background="@mipmap/qm_btn_publishdynamic_add" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RlBottom"
+                android:layout_width="match_parent"
+                android:layout_height="145dip"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/textRecordTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/xldynamic_publish_voice_seconds"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"/>
+
+                <com.qm.gangsdk.ui.custom.button.XLRecorderButton
+                    android:id="@+id/btnVoiceRecord"
+                    android:layout_width="87dip"
+                    android:layout_height="87dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/textRecordTime"
+                    android:layout_marginTop="5dip"
+                    android:background="@mipmap/qm_btn_publishdynamic_voice" />
+
+                <TextView
+                    android:id="@+id/textRecordState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dip"
+                    android:layout_below="@+id/btnVoiceRecord"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/xldynamic_publish_voice_state"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>
